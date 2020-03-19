@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PherWiss Teil 2: Angewandtes Programmieren</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+
+      blockquote {
+          background: #f9f9f9;
+          border-left: 10px solid #ccc;
+          margin: 2px 0.5em;
+          padding: 2px 1.5em;
+      }
+      strong {
+          font-weight: 600;
+      }
+      em {
+          font-style: italic;
+      }
+      a {
+          color: #778;
+          text-underline-position: under;
+          word-wrap: break-word;
+      }
+
+      .remark-slide-content { font-size: 1.5em; }
+      .larger { font-size: 1.75em; }
+      .largest { font-size: 2em; }
+      .smaller { font-size: .9em; }
+      .smallest { font-size: .7em; }
+      .remark-code, .remark-inline-code {
+          font-family: 'Ubuntu Mono';
+          font-size: 0.8em
+      }
+
+      /* Two-column layouts */
+      .left-column  { width: 49%; float: left; }
+      .left-column-33  { width: 33%; float: left; }
+      .left-column-66  { width: 66%; float: left; }
+
+      .right-column { width: 49%; float: left; }
+      .right-column-33 { width: 33%; float: left; }
+      .right-column-66 { width: 66%; float: left; }
+
+      .right-column ~ p { clear: both; }
+      .right-column ~ ul { clear: both; }
+
+      .full-width table { width: 100%; }
+      th { text-align: left; }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# PherWiss Teil 2: Angewandtes Programmieren
+
+Martin Claus | <mclaus@geomar.de> | DW20 R.422
+
+---
+
+# Agenda heute
+
+.larger[
+-  Organisatorisches und Kursinhalt
+
+-  Kursinfrastruktur
+
+-  Was sind Programmiersprachen?
+]
+---
+class: center, middle
+
+# Organisatorisches und Kursinhalt
+
+---
+
+# Ziel des Kurses
+
+-   Wesentliche Elemente der gängigen strukturierten Programmiersprachen
+
+-   Die Kursteilnehmer sollen in die Lage versetzt werden,
+mit Hilfe eines Computers **wissenschaftliche Daten auszuwerten**.
+
+-   Die im Kurs verwendete Sprache ist Python, die **vermittelten
+Konzepte** sind aber leicht auf alle gängigen Sprachen **übertragbar**.
+
+-   Best-practice.
+
+-   **Learning by doing!**
+
+---
+
+# Inhalt
+
+-  Datentypen und Speicher
+-  Programmablauf und Strukturen
+-  Funktionen
+-  Objektorientiertes Programmieren
+-  Modularisierung
+-  Numerische Datenanalyse
+-  Visualisierung
+-  Datenformate und Ein- und Ausgabe
+-  Testing
+-  Versionskontrolle
+-  Best-practice
+
+---
+
+# Termine und Kontakt
+
+-   11 Termine
+    -   keine Übung am 22.04 (Ostermontag) und 10.06 (Exkursionswoche)
+    -   Letzte Veranstaltung am 01.07
+
+-   Kontakt
+
+    Martin Claus,
+
+    Raum 422,
+
+    <mclaus@geomar.de>
+
+---
+
+# Prüfungsleistung
+
+Laut Modulhandbuch:
+
+-   Präsenzstudium: ~25 Stunden
+-   Selbststudium:  ~34 Stunden
+-   keine Vorraussetzung zur Zulassung zur Prüfung
+
+Die **Prüfungsleistung** besteht in der Anfertigung eines *Lab books* in Form eines
+*Jupyter Notebooks*. Dieses muss spätestens zum Ende des ersten Prüfungszeitraums (22.07.2019) an
+<mclaus@geomar.de> geschickt werden.
+
+Das Lab book soll wärend der Übungsstunde entstehen und Ihnen als spätere Referenz dienen.
+Die Prüfungsleistung ist **nicht benotet**. Dies ist ein **Pflichtmodul** und
+Voraussetzung zur Teilnahme an *PherData*.
+---
+
+class: center, middle
+
+# Kursinfrastruktur
+
+---
+
+# Arbeitsumgebung
+
+Wir werden im Kurs eine interaktive Arbeitsumgebung, basierend auf *Jupyter Lab*,
+benutzen:
+
+<https://schulung1.geomar.de>
+
+Diese ist von Zuhause aus erreichbar. Der Zugang ist **passwortgeschützt**. Auf
+[OLAT](https://lms.uni-kiel.de/url/RepositoryEntry/2585952256) bis zum **10.04**
+registrieren. Am 11.04 habe ich die Benutzer eingerichtet.
+
+-   Benutzername: Ihre stu-Kennung
+-   Passwort: Wird bei der ersten Anmeldung selbst gesetzt.
+
+Der Zugang ist bis zum 31.07.2019 garantiert. **Danach wird alles gelöscht!**
+Wer seinen **eigenen Rechner** mitbringen kann, soll dies bitte tun!
+Voraussetzung: [eduroam-Zugang](https://www.rz.uni-kiel.de/de/tipps/wlan)
+muss eingerichtet sein!
+
+**Hausaufgabe**: Machen Sie sich mit der *Jupyter lab* Oberfläche vertraut!
+
+---
+
+# Python auf dem eigenen Rechner installieren
+
+Empfohlene Prozedur:
+
+-   [Installation der Anaconda oder Miniconda Distribution](https://docs.anaconda.com/anaconda/install/)
+
+-   Eventuell Installation von weiteren Paketen mit [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html)
+
+-   Erfahrenere Benutzer sollten das Paket `nb_conda_kernels` installieren und sich
+    mit der Verwendung von [virtuellen Umgebungen](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+    vertraut machen
+
+---
+
+class: center, middle
+
+# Programmiersprachen
+
+Umfrage:
+
+Wer hat schon einmal programmiert?
+
+Mit welcher Sprache?
+---
+
+# Was ist eine Programmiersprache
+
+Eine Programmiersprache ist eine formale Sprache zur
+Formulierung von **Datenstrukturen** und **Algorithmen**.
+
+Die meisten Sprachen bieten Elemente zur **Steuerung des Programmablaufs**.
+
+Die Anweisungen werden nach vorgegebenen Muster,
+der **Syntax**, zusammengesetzt.
+
+```Fortran
+SUBROUTINE SWM_timestep_step
+  use vars_module, only : N0p1
+  use domain_module, only: eta_grid
+  IMPLICIT NONE
+  real(KDOUBLE), dimension(:,:), pointer :: eta=>null()
+
+  CALL SWM_timestep_nonlinear
+
+  eta => SWM_eta(:,:, N0p1)
+  where (eta .lt. (minD - eta_grid%H)) eta = minD - eta_grid%H
+
+END SUBROUTINE SWM_timestep_step
+```
+---
+.center[
+<img src="img/1_Programmiersprache_Umfeld.png" width="100%"/>
+]
+---
+
+# Arten von Programmiersprachen
+
+-   Maschinensprache und Assemblersprachen: hardwarenahe Programmierung
+
+-   Höhere Programmiersprachen: komfortableres, schnelleres Programmieren
+
+-   Skriptsprachen: Steuerung von Rechnern
+
+-   Grafische Programmiersprachen
+
+---
+# Assembler
+
+.center[
+<a title="BigDumbDinosaur, representing BCS Technology Limited [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:W65C816S_Machine_Code_Monitor.jpeg"><img width="512" alt="W65C816S Machine Code Monitor" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/W65C816S_Machine_Code_Monitor.jpeg/512px-W65C816S_Machine_Code_Monitor.jpeg"></a>
+]
+
+---
+# Höhere Programmiersprachen
+
+```c
+#include <stdio.h>
+int main()
+{
+    int number;
+
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    // True if the number is perfectly divisible by 2
+    if(number % 2 == 0)
+        printf("%d is even.", number);
+    else
+        printf("%d is odd.", number);
+
+    return 0;
+}
+```
+---
+
+# Skriptsprachen
+
+```bash
+#!/bin/bash
+
+for stem in $(ls *_restart_*.nc |  rev | cut -d_ -f2- | uniq | rev); do
+    tar -czvf ${stem}.tar.gz ${stem}_????.nc && rm -v ${stem}_????.nc
+done
+```
+---
+
+# Graphische Sprache
+
+<a title="Lehmos [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Programm_Wiederhole_Fahre_Drehe.png"><img width="90%" alt="Programm Wiederhole Fahre Drehe" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Programm_Wiederhole_Fahre_Drehe.png"></a>
+
+---
+
+# Elemente einer Programmiersprache
+
+```python
+def add5(x):
+    if isinstance(x, int):
+        x = x + 5
+    else:
+        raise TypeError("Wrong type")
+    return x
+
+print(add5(64))
+```
+
+-   Syntax
+
+-   Semantik
+
+-   Typen System
+
+-   Standard Library
+
+---
+# Syntax
+
+Die *Syntax* is die Grammatik einer Sprache. Sie beschreibt alle möglichen
+Kombinationen von Symbolen (Wörter, Zahlen, Zeichen), die ein syntaktisch
+korrektes Programm bilden können.
+
+Beispiel angelegt an *List*:
+
+```
+expression ::= atom | list
+atom       ::= number | symbol
+number     ::= [+-]?['0'-'9']+
+symbol     ::= ['A'-'Z''a'-'z'].*
+list       ::= '(' expression* ')'
+```
+
+Nicht alle syntaktisch korrekten Programme sind semantisch korrekt oder sinnvoll:
+
+```
+"Colorless green ideas sleep furiously."
+"John is a married bachelor."
+```
+---
+
+# Semantik
+
+Die *Semantik* beschreibt die Bedeutung einer Sprache.
+
+*Statische Semantik*: definiert Beschränkungen der Struktur gültigen Texts, welche
+nicht durch semantische Regeln ausgedrückt werden können. Häufig geschieht dies
+durch die definition eines *Typen Systems*.
+
+```Python
+def f(x):
+    return x
+f + 3        # semantisch nicht korrekt
+f(4, 5, 6)   # semantisch nicht korrekt
+```
+
+*Dynamische Semantik*: definiert wie und wann die verschieden Konstrukte einer
+Sprache ein Programmverhalten erzeugen.
+
+```Python
+a = 1; b = 2
+a, b = b, b + a
+```
+
+---
+
+# Typen System
+
+Ein *Typen System* definiert, wie eine Programmiersprache Werte und Ausdrücke
+in Typen klassifiziert. Dadurch soll die Richtigkeit eines Programms sicher
+gestellt werden.
+
+-   *typed* vs *untyped*: untyped Sprachen erlauben jede Operation auf allen Daten.
+    Typisierte Sprachen erlauben nur bestimmte Operation zwischen bestimmten Typen.
+-   *static* vs *dynamic* typing: bei statisch typisierte Sprachen muss der Type
+    vor der Programmausführung definiert werden. Bei dynamisch typisierten Sprachen
+    wird die Korrektheit einer Operation zur Laufzeit überprüft.
+-   *weak* vs *strong* typing: schwach Typisierung erlaubt, einen Typen wie einen anderen
+    zu behandeln, z.B. durch implizite Typenkonversion.
+
+```Python
+1.0 + 1
+5 / 3
+```
+
+---
+
+# Programmierparadigmen
+
+Ein *Programmierparadigma* ist ein Stil um Struktur und Bestandteile eines Programms zu erstellen.
+Programmiersprachen können nach folgenden Paradigmen klassifiziert werden:
+
+.smaller[
+-   **deklarativ**: beschreibt, was gemacht werden soll, aber nicht wie (z.B. SQL, HTML)
+    -   *funktional*: Ergebnis ist formuliert als eine Verkettung von Funktionen
+    -   *logisch*: Ergebnis ist formuliert als die Antwort auf eine Frage über ein System von Regeln und Tatsachen
+    -   *mathematisch*: Ergebnis ist formuliert als die Lösung eine Optimierungsproblems
+-   **imperativ**: besteht aus Anweisungen, wie die Maschine ihren Zustand ändern soll
+    -   *prozedural*: gruppiert Instruktionen in Prozeduren
+    -   *objektorientiert*: Instruktionen werden zusammen mit dem dazugehörigen Zustand gruppiert.
+]
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
