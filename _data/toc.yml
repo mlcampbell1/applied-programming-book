@@ -36,4 +36,20 @@
 - divider: true
 
 # Add a header and sample content section
-- header: Demo textbook
+- header: Basics
+
+- title: Data Types
+  url: /basics/2_data_types
+  not_numbered: true
+
+- title: Program Flow
+  url: /basics/3_Programmablauf_und_strukturen
+  not_numbered: true
+
+- title: Functions
+  url: /basics/4_Funktionen
+  not_numbered: true
+
+- title: Objectoriented Programming
+  url: /basics/5_Objektorientierte_programmierung
+  not_numbered: true
