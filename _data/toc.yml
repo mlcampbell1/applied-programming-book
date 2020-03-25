@@ -26,6 +26,10 @@
   url: /intro
   not_numbered: true
 
+- title: Work environments
+  url: /work_environments
+  not_numbered: true
+
 # External link
 - title: GitHub repository
   url: https://github.com/jupyter/jupyter-book
@@ -35,21 +39,26 @@
 # Divider for meta-pages and content page
 - divider: true
 
-# Add a header and sample content section
-- header: Basics
+- header: Introduction
 
-- title: Data Types
-  url: /basics/2_data_types
+
+- title: Programming languages
+  url: /introduction
   not_numbered: true
 
-- title: Program Flow
-  url: /basics/3_Programmablauf_und_strukturen
-  not_numbered: true
-
-- title: Functions
-  url: /basics/4_Funktionen
-  not_numbered: true
-
-- title: Objectoriented Programming
-  url: /basics/5_Objektorientierte_programmierung
-  not_numbered: true
+- title: Basics
+  url: /basics/basics
+  expand_sections: true
+  sections:
+  - title: Data Types
+    url: /basics/2_data_types
+    not_numbered: false
+  - title: Program Flow
+    url: /basics/3_Programmablauf_und_strukturen
+    not_numbered: true
+  - title: Functions
+    url: /basics/4_Funktionen
+    not_numbered: true
+  - title: Objectoriented Programming
+    url: /basics/5_Objektorientierte_programmierung
+    not_numbered: true
