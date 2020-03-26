@@ -1,5 +1,4 @@
 .sass-cache/*
 _site/*
 _build/*
-*-checkpoint.ipynb
-*-checkpoint.html
+*-checkpoint.*

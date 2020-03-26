@@ -39,26 +39,24 @@
 # Divider for meta-pages and content page
 - divider: true
 
-- header: Introduction
-
-
-- title: Programming languages
-  url: /introduction
-  not_numbered: true
+- title: Introduction
+  url: /introduction/introduction
+  not_numbered: false
 
 - title: Basics
   url: /basics/basics
   expand_sections: true
+  not_numbered: false
   sections:
   - title: Data Types
     url: /basics/2_data_types
-    not_numbered: false
+    not_numbered: true
   - title: Program Flow
-    url: /basics/3_Programmablauf_und_strukturen
+    url: /basics/3_program_flow_and_structure
     not_numbered: true
   - title: Functions
-    url: /basics/4_Funktionen
+    url: /basics/4_functions
     not_numbered: true
-  - title: Objectoriented Programming
-    url: /basics/5_Objektorientierte_programmierung
+  - title: Object-oriented Programming
+    url: /basics/5_oop
     not_numbered: true
