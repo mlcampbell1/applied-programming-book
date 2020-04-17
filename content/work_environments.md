@@ -27,4 +27,4 @@ conda install jupyterlab
 
 When you gain more experience with managing packages, you should make yourself comfortable with the idea of [virtual environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 These allow to specify multiple environments which may differ in terms of installed packages or package versions.
-By installing the package [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels) into the environment in which Jupyter Lab is installed, all virtual environments which have a Jupyter kernel package, such as [ipykernel](https://github.com/ipython/ipykernel), are available to run a Jupyter notebook.
+By installing the package [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels) into the environment in which Jupyter Lab is installed, all virtual environments which have a Jupyter kernel package (e.g. [ipykernel](https://github.com/ipython/ipykernel)) installed are available to run a Jupyter notebook.
