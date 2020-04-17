@@ -1,7 +1,7 @@
 # Weblab at CAU Kiel
 
 For the module "PherWiss: Angewandtes Programmieren" we will use a web-based interactive computing environment to do the exercises.
-The URL of the platform is https://weblab.uni-kiel.denad it is based on [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/).
+The URL of the platform is https://weblab.uni-kiel.de and it is based on [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/).
 The system is reachable from everywhere in the world, so no VPN connection to the universities network is necessary.
 I recommend to take a look at the [Jupyter Lab User Guide](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) to make yourself comfortable with the user interface.
 
