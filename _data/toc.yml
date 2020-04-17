@@ -39,8 +39,8 @@
 # Divider for meta-pages and content page
 - divider: true
 
-- title: Introduction
-  url: /introduction/introduction
+- title: Programming Languages
+  url: /programming_languages
   not_numbered: false
 
 - title: Basics
