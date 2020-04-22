@@ -134,7 +134,7 @@ In a scripting language the instructions typically consists of processing some d
 A scripting language typically also offers some language structures, such as loops and branching, and the possibility of storing data in variables.
 This allows to build customized complex functions or tasks which greatly helps in the daily work.
 
-The example below is for bash. In the first line, it lists all files matching some pattern (`ls *_restart_*.nc`), reverses this list (`rev`), split each filename at the underscores and returns everything except the first column (`cut -d_ -f2-`), drop all duplicate lines (`unique`) and reverses the result again (`rev`).
+The example below is for bash. In the first line, it lists all files matching some pattern (`ls *_restart_*.nc`), reverses this list (`rev`), split each filename at the underscores and returns everything except the first column (`cut -d_ -f2-`), drop all duplicate lines (`uniq`) and reverses the result again (`rev`).
 The output of each of the programs is "piped" to the next one using the pipe operator `|`.
 Then the script iterates over the resulting list and for each entry we combine all files matching some pattern into a single archive file (`tar -czvf ${stem}.tar.gz ${stem}_????.nc`) and, if that has been successful, we remove these files (`rm -v ${stem}_????.nc`). These kind of scripts will greatly help if you deal with thousands of files.
 ```bash
@@ -266,9 +266,9 @@ A *programming paradigm* is a style of creating the structure and components of 
 Programming languages may be classified into following paradigms:
 
 -   **declarative**: describes what shall be done but not how (e.g. [SQL](https://en.wikipedia.org/wiki/SQL), [HTML](https://en.wikipedia.org/wiki/html))
-    -   *functional*: the result is formulated as a chain of functions (e.g. [Haskell](https://en.wikipedia.org/wiki/Haskell_(programming_language)))
+    -   *functional*: the result is formulated as a chain of functions (e.g. [Haskell](https://en.wikipedia.org/wiki/Haskell_(programming_language))
     -   *logical*: the result is the answer to a question about a system of rules and facts (e.g. [Prolog](https://en.wikipedia.org/wiki/Prolog))
     -   *mathematical*: the result is the solution to a optimization problem (e.g. [AMPL](https://en.wikipedia.org/wiki/AMPL))
 -   **imperativ**: consists of instructions on how the machine is changing its state
-    -   *procedural*: groups instructions into procedures or functions (e.g. [C](https://en.wikipedia.org/wiki/C_(programming_language)))
-    -   *object-oriented*: groups instructions together with the related data (e.g. [Java](https://en.wikipedia.org/wiki/Java_(programming_language)))
+    -   *procedural*: groups instructions into procedures or functions (e.g. [C](https://en.wikipedia.org/wiki/C_(programming_language) or [FORTRAN](https://en.wikipedia.org/wiki/Fortran))
+    -   *object-oriented*: groups instructions together with the related data (e.g. [Java](https://en.wikipedia.org/wiki/Java_(programming_language))
