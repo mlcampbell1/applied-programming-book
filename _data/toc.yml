@@ -45,9 +45,11 @@
   - title: Primitive Data Types
     url: /basics/primitive_data_types
     not_numbered: true
-  # - title: Sequences
-  #   url: /basics/sequences
-  #   not_numbered: true
+  - title: Sequences
+    url: /basics/sequences
+    not_numbered: true
+    sections:
+      # hidden: true
   # - title: Program Flow
   #   url: /basics/program_flow_and_structure
   #   not_numbered: true
@@ -59,6 +61,9 @@
   #   not_numbered: true
 
 - divider: true
+  sections:
+  - url: /exercises/sequences_exercise
+
 # External link
 - title: GitHub repository
   url: https://github.com/martinclaus/applied-programming-book
