@@ -1,4 +1,6 @@
-# Weblab at CAU Kiel
+# Interactive Work Environment
+
+## Weblab at CAU Kiel
 
 For the module "PherWiss: Angewandtes Programmieren" we will use a web-based interactive computing environment to do the exercises.
 The URL of the platform is https://weblab.uni-kiel.de and it is based on [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/).
@@ -13,7 +15,7 @@ Please remember your password carefully, since password reset is not easily poss
 Please note that your account and all of your data will be deleted after the end of the second examination period of the summer term.
 Make a backup of all your data on your local machine by [downloading](https://jupyterlab.readthedocs.io/en/stable/user/files.html#uploading-and-downloading) all relevant files.
 
-# Python on your machine
+## Python on your machine
 
 To install a similar environment on your own computer, I recommend to install the [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) distribution.
 Anaconda is a Python distribution for scientific data analysis.

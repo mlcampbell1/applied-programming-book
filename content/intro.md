@@ -1,4 +1,4 @@
-# Applied Programming for Physics of the Earth System
+# Introduction
 
 <!-- <img src="https://circleci.com/gh/jupyter/jupyter-book.svg?style=svg"> -->
 
@@ -8,8 +8,8 @@ The target audience does not need to have any prior programming skills.
 
 Here is the content of the course
 
-* [Introduction](introduction) to programming languages and definition of some vocabulary
-* [Basics](basics/basics) introduces the basic elements of structured programming languages such as data types, branching, loops and functions. Also, a introduction to object-oriented programming is given.
+* [Introduction](/content/programming_languages) to programming languages and definition of some vocabulary
+* [Basics](/content/basics/basics) introduces the basic elements of structured programming languages such as data types, branching, loops and functions. Also, a introduction to object-oriented programming is given.
 
 ## Acknowledgements
 

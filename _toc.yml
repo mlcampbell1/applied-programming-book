@@ -1,35 +1,22 @@
-# - header: Getting started
 - file: content/intro
-  title: Home
+#- header: Getting started
 - file: content/work_environments
-#
-# - title: Work environments
-#   url: /work_environments
-#   not_numbered: true
 #
 # # Divider for meta-pages and content page
 # - divider: true
-#
-# - title: Programming Languages
-#   url: /programming_languages
-#   not_numbered: false
-#
-# - title: Basics
-#   url: /basics/basics
-#   expand_sections: true
-#   not_numbered: false
-#   sections:
-#   - title: Primitive Data Types
-#     url: /basics/primitive_data_types
-#     not_numbered: true
-#   - title: Sequences
-#     url: /basics/sequences
-#     not_numbered: true
-#     sections:
-      # hidden: true
-  # - title: Program Flow
-  #   url: /basics/program_flow_and_structure
-  #   not_numbered: true
+
+- file: content/programming_languages
+
+- header: Basics
+- file: content/basics/basics
+- file: content/basics/primitive_data_types
+- file: content/basics/sequences
+  sections:
+    - file: content/exercises/sequences_exercise
+- file: content/basics/program_flow_and_structure
+  sections:
+    - file: content/exercises/program_flow_and_structure_exercise
+    
   # - title: Functions
   #   url: /basics/functions
   #   not_numbered: true
