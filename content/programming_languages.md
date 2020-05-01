@@ -18,10 +18,11 @@ A algorithm is a finite sequence of well-defined instructions to solve a problem
 The concept of an algorithm is quite old and exists since the antique, e.g. in the form of arithmetic algorithms such as the [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) to compute the greatest common divisor.
 Since the order of execution of the instructions are well-defined, algorithms can be easily implemented in a machine executable way which is one task of the programmer.
 
-## A non-computer example
+### A non-computer example
 <a title="Hansmuller / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Music_box_with_detachable_handle_-_2.jpg">
-<img width="256" alt="Music box with detachable handle - 2" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Music_box_with_detachable_handle_-_2.jpg" class="left">
+<img width="256" alt="Music box with detachable handle - 2" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Music_box_with_detachable_handle_-_2.jpg">
 </a>
+
 A non-computer example of a programmable machine is a [music box](https://en.wikipedia.org/wiki/Music_box).
 In this case, the algorithm is the roll on which the melody is encoded.
 The only data structure available is a pin standing out of the roll.
@@ -30,7 +31,7 @@ Hence, the set of all allowable positions form the syntax.
 The order of execution (playing of tones) is defined by the relative position of the pins along the direction of rotation of the roll.
 Even such a simple machine as the music box offer all fundamental elements of a programming language.
 
-## A computer example
+### A computer example
 
 The following is a [Fortran](https://en.wikibooks.org/wiki/Fortran) implementation of [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) to find the greatest common divisor.
 In fact, in the 1960s, Fortran programs where written using punch cards, hence programming was a mechanical exercise in those days, just like for the music box.
@@ -64,7 +65,7 @@ With Fortran this is done by the **compiler**, a computer program that translate
 The result is a binary executable, that is a executable file, that is able to run on the machine it has been compiled for.
 While the source code can be compiled for many different machines (we also say "architectures"), the binary executable is specific to a single machine.
 
-## Another computer example
+### Another computer example
 Now we take a look at the same algorithm as above, but now it is implemented in [Python](https://www.python.org).
 
 ```python
@@ -83,12 +84,12 @@ One not so obvious but important difference of both languages is that, unlike Fo
 More precisely, for execution, the source code is read by a program, called the **interpreter**, which executes all the instructions line by line in the order in which they are read.
 
 
-# Types of Programming Languages
+## Types of Programming Languages
 
 There are different types of programming languages and many ways of distinguishing them.
 One possible way of distinction is grouping them into machine or assembler languages, higher programming languages, scripting languages and graphical programming languages.
 
-## Assembler
+### Assembler
 
 An Assembler language is a low-level language which instructions have a very strong correspondence to the instructions of the architecture's machine code.
 For example, the language contains instructions for moving data from memory to the processor register and to perform operations on it.
@@ -98,7 +99,7 @@ A compiler of a high-level language is translating the high-level language code 
 Below is some example of assembler code. While the code is hardly readable for a human, it is perfectly readable for a machine.
 <a title="BigDumbDinosaur, representing BCS Technology Limited [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:W65C816S_Machine_Code_Monitor.jpeg"><img width="512" alt="W65C816S Machine Code Monitor" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/W65C816S_Machine_Code_Monitor.jpeg/512px-W65C816S_Machine_Code_Monitor.jpeg"></a>
 
-## High-level Languages
+### High-level Languages
 
 The aim of high-level languages is to enable a programmer to write code that is more or less independent of the underlying hardware.
 Examples of high-level languages are C, FORTRAN or Python.
@@ -127,7 +128,7 @@ int main()
 }
 ```
 
-## Scripting Languages
+### Scripting Languages
 
 Scripting languages are mostly used to control computers or to automate task using a computer.
 In a scripting language the instructions typically consists of processing some data using existing programs.
@@ -145,7 +146,7 @@ for stem in $(ls *_restart_*.nc |  rev | cut -d_ -f2- | uniq | rev); do
 done
 ```
 
-## Graphical Languages
+### Graphical Languages
 
 Graphical languages use a visual representation of the program flow or structure.
 These type of languages are often used for educational purposes, e.g. as for LEGO Mindstorm.
@@ -157,7 +158,7 @@ This kind of programming model can be visualized and hence, using some tool to d
 
 <a title="Lehmos [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Programm_Wiederhole_Fahre_Drehe.png"><img width="90%" alt="Programm Wiederhole Fahre Drehe" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Programm_Wiederhole_Fahre_Drehe.png"></a>
 
-# Language Elements
+## Language Elements
 
 A programming language consists of the following elements: syntax, semantic, type system, and the standard library.  
 All these elements determine if the following code is valid and can be executed by the computer.
@@ -173,7 +174,7 @@ def add5(x):
 print(add5(64))
 ```
 
-## Syntax
+### Syntax
 
 The *syntax* is the grammar of a language.
 It describes all possible combination of symbols (words, numbers, characters) which may make a syntactically correct program.
@@ -201,7 +202,7 @@ Here is a natural language example of statements which have a correct grammar bu
 "John is a married bachelor."
 ```
 
-## Semantic
+### Semantic
 
 The meaning of a language is described by the *semantic*.
 We distinguish between *static semantic* and *dynamic semantic*.
@@ -227,7 +228,7 @@ a, b = b, b + a
 In Python, the semantic rule for assignment operations is that before the assignment, the right hand side is evaluated.
 That means that `b` will have the value `3` in the end.
 
-## Type System
+### Type System
 
 A *type system* classifies values and expressions in *types*.
 Possible types for a number may be integer, floating point or complex.
@@ -260,7 +261,7 @@ However, the program has no problem in accepting a integer as the argument to th
 When the addition is taking place, the integer number is implicitly converted to a float.
 
 
-# Programming paradigms
+## Programming paradigms
 
 A *programming paradigm* is a style of creating the structure and components of a program.
 Programming languages may be classified into following paradigms:
