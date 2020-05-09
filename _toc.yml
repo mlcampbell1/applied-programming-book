@@ -16,8 +16,10 @@
 - file: content/basics/program_flow_and_structure
   sections:
     - file: content/exercises/program_flow_and_structure_exercise
-    
-  # - title: Functions
+
+- file: content/basics/functions
+  sections:
+    - file: content/exercises/functions_exercise
   #   url: /basics/functions
   #   not_numbered: true
   # - title: Object-oriented Programming
