@@ -8,11 +8,15 @@
 - file: content/programming_languages
 
 - header: Basics
+
 - file: content/basics/basics
+
 - file: content/basics/primitive_data_types
+
 - file: content/basics/sequences
   sections:
     - file: content/exercises/sequences_exercise
+
 - file: content/basics/program_flow_and_structure
   sections:
     - file: content/exercises/program_flow_and_structure_exercise
@@ -20,11 +24,10 @@
 - file: content/basics/functions
   sections:
     - file: content/exercises/functions_exercise
-  #   url: /basics/functions
-  #   not_numbered: true
-  # - title: Object-oriented Programming
-  #   url: /basics/oop
-  #   not_numbered: true
+
+- file: content/basics/oop
+  sections:
+    - file: content/exercises/oop_exercise
 
 # - divider: true
 #   sections:
