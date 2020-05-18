@@ -29,6 +29,7 @@
   sections:
     - file: content/exercises/oop_exercise
 
+- file: content/exercises/basic_exercises
 # - divider: true
 #   sections:
 #   - url: /exercises/sequences_exercise
