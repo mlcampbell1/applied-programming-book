@@ -30,6 +30,11 @@
     - file: content/exercises/oop_exercise
 
 - file: content/exercises/basic_exercises
+
+- header: Scientific Computing
+
+- file: content/scientific_computing/numpy
+
 # - divider: true
 #   sections:
 #   - url: /exercises/sequences_exercise
