@@ -34,6 +34,8 @@
 - header: Scientific Computing
 
 - file: content/scientific_computing/numpy
+  sections:
+    - file: content/exercises/numpy_exercise
 
 # - divider: true
 #   sections:
