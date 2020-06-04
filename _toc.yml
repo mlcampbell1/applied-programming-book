@@ -37,6 +37,9 @@
   sections:
     - file: content/exercises/numpy_exercise
 
+- file: content/scientific_computing/input_output
+  sections:
+    - file: content/exercises/input_output_exercise
 # - divider: true
 #   sections:
 #   - url: /exercises/sequences_exercise
