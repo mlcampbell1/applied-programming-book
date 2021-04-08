@@ -8,8 +8,9 @@ The target audience does not need to have any prior programming skills.
 
 Here is the content of the course
 
-* [Introduction](/content/programming_languages) to programming languages and definition of some vocabulary
-* [Basics](/content/basics/basics) introduces the basic elements of structured programming languages such as data types, branching, loops and functions. Also, a introduction to object-oriented programming is given.
+-  [Introduction](/content/programming_languages) to programming languages and definition of some vocabulary
+-  [Basics](/content/basics/basics) introduces the basic elements of structured programming languages such as data types, branching, loops and functions. Also, a introduction to object-oriented programming is given.
+-  [Scientific Computing](/content/scientific_computing/numpy) gives an introduction to the fundamental packages used for scientific data analysis and computing tasks.
 
 ## Acknowledgements
 
