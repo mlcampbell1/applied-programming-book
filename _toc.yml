@@ -1,47 +1,45 @@
 - file: content/intro
-#- header: Getting started
-- file: content/work_environments
+
+- part: Getting started
+  chapters:
+  - file: content/work_environments
+  - file: content/programming_languages
 #
 # # Divider for meta-pages and content page
 # - divider: true
 
-- file: content/programming_languages
 
-- header: Basics
-
-- file: content/basics/basics
-
-- file: content/basics/primitive_data_types
-
-- file: content/basics/sequences
-  sections:
+- part: Basics
+  chapters:
+  - file: content/basics/basics
+    sections:
+    - file: content/exercises/basic_exercise
+  - file: content/basics/primitive_data_types
+    sections:
+    - file: content/exercises/primitive_data_types_exercise
+  - file: content/basics/sequences
+    sections:
     - file: content/exercises/sequences_exercise
-
-- file: content/basics/program_flow_and_structure
-  sections:
+  - file: content/basics/program_flow_and_structure
+    sections:
     - file: content/exercises/program_flow_and_structure_exercise
-
-- file: content/basics/functions
-  sections:
+  - file: content/basics/functions
+    sections:
     - file: content/exercises/functions_exercise
-
-- file: content/basics/oop
-  sections:
+  - file: content/basics/oop
+    sections:
     - file: content/exercises/oop_exercise
+  - file: content/exercises/exercises
 
-- file: content/exercises/basic_exercises
-
-- header: Scientific Computing
-
-- file: content/scientific_computing/numpy
-  sections:
-    - file: content/exercises/numpy_exercise
-
-- file: content/scientific_computing/input_output
-  sections:
-    - file: content/exercises/input_output_exercise
-
-- file: content/scientific_computing/visualization
+- part: Scientific Computing
+  chapters:
+  - file: content/scientific_computing/numpy
+    sections:
+      - file: content/exercises/numpy_exercise
+  - file: content/scientific_computing/input_output
+    sections:
+      - file: content/exercises/input_output_exercise
+  - file: content/scientific_computing/visualization
 # - divider: true
 #   sections:
 #   - url: /exercises/sequences_exercise
@@ -51,3 +49,5 @@
 #   url: https://github.com/martinclaus/applied-programming-book
 #   external: true
 #   not_numbered: true
+
+

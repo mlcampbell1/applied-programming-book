@@ -4,7 +4,7 @@ title                       : Applied Programming for Physics of the Earth Syste
 author                      : Martin Claus
 copyright                   : 2020,  # Copyright year to be placed in the footer
 logo                        : "content/images/logo/logo.png"  # A path to the book logo
-exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : [content/LICENSE.md]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
@@ -48,5 +48,5 @@ repository:
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
-  extra_extensions          : ""  # A list of extra extensions to load by Sphinx.
-  config                    : ""  # key-value pairs to directly over-ride the Sphinx configuration
+  extra_extensions          : []  # A list of extra extensions to load by Sphinx.
+  config                    :   # key-value pairs to directly over-ride the Sphinx configuration

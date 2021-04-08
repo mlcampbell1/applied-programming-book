@@ -3,7 +3,6 @@
 pandas
 numpy
 matplotlib
-nbinteract
 scipy
-jupyter-book
+jupyter-book==0.10.2
 myturtle
