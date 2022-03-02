@@ -1,15 +1,11 @@
-- file: content/intro
-
-- part: Getting started
+format: jb-book
+root: content/intro
+parts:
+- caption: Getting started
   chapters:
   - file: content/work_environments
   - file: content/programming_languages
-#
-# # Divider for meta-pages and content page
-# - divider: true
-
-
-- part: Basics
+- caption: Basics
   chapters:
   - file: content/basics/basics
     sections:
@@ -30,24 +26,12 @@
     sections:
     - file: content/exercises/oop_exercise
   - file: content/exercises/exercises
-
-- part: Scientific Computing
+- caption: Scientific Computing
   chapters:
   - file: content/scientific_computing/numpy
     sections:
-      - file: content/exercises/numpy_exercise
+    - file: content/exercises/numpy_exercise
   - file: content/scientific_computing/input_output
     sections:
-      - file: content/exercises/input_output_exercise
+    - file: content/exercises/input_output_exercise
   - file: content/scientific_computing/visualization
-# - divider: true
-#   sections:
-#   - url: /exercises/sequences_exercise
-#
-# # External link
-# - title: GitHub repository
-#   url: https://github.com/martinclaus/applied-programming-book
-#   external: true
-#   not_numbered: true
-
-

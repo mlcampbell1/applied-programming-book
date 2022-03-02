@@ -4,5 +4,5 @@ pandas
 numpy
 matplotlib
 scipy
-jupyter-book==0.10.2
+jupyter-book==0.12.2
 myturtle

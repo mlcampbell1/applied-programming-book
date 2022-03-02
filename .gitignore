@@ -1,3 +1,4 @@
 _build/*
 *-checkpoint.*
 _build
+.DS_Store
