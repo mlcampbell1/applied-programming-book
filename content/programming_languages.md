@@ -193,7 +193,7 @@ An `atom` is either a `number` or a `symbol`.
 A `number` may be signed and contains a non-zero number of digits.
 A `symbol` is any combination of lower- and uppercase letters.
 A `list` is surrounded by round brackets and may contain zero or more Elements of the type `expression`.
-Hence a `list` may contain a `list` as a n element.
+Hence a `list` may contain a `list` as an element.
 
 Note that not all syntactically correct programs are correct or make sense.
 Here is a natural language example of statements which have a correct grammar but do not make sense.
