@@ -1,8 +1,11 @@
-# Requirements for the demo notebooks
-# Useful for MyBinder configuration
+# Built time requirements
 pandas
 numpy
 matplotlib
 scipy
 jupyter-book==0.12.2
 myturtle
+graphviz
+netCDF4
+cartopy
+ipykernel

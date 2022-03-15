@@ -1,0 +1,18 @@
+# run-time requirements
+name: applied_programming_book
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - bzip2
+  - pandas
+  - numpy
+  - matplotlib
+  - scipy
+  - netCDF4
+  - cartopy
+  - python-graphviz
+  - ipykernel
+  - pip:
+    - myturtle
