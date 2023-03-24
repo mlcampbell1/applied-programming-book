@@ -1,2 +1,0 @@
-# Built time requirements
-jupyter-book==0.12.2
