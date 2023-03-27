@@ -2,7 +2,7 @@ format: jb-book
 root: content/intro
 parts:
 - caption: Getting started
- chapters:
+  chapters:
   - file: content/work_environments
   - file: content/programming_languages
 - caption: Basics
@@ -35,4 +35,3 @@ parts:
     sections:
     - file: content/exercises/input_output_exercise
   - file: content/scientific_computing/visualization
- 
