@@ -2,4 +2,6 @@ format: jb-book
 root: content/intro
 parts:
 - caption: Getting started
- 
+ chapters:
+  - file: content/work_environments
+  - file: content/programming_languages
