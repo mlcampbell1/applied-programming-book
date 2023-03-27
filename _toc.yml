@@ -2,36 +2,4 @@ format: jb-book
 root: content/intro
 parts:
 - caption: Getting started
-  chapters:
-  - file: content/work_environments
-  - file: content/programming_languages
-- caption: Basics
-  chapters:
-  - file: content/basics/basics
-    sections:
-    - file: content/exercises/basic_exercise
-  - file: content/basics/primitive_data_types
-    sections:
-    - file: content/exercises/primitive_data_types_exercise
-  - file: content/basics/sequences
-    sections:
-    - file: content/exercises/sequences_exercise
-  - file: content/basics/program_flow_and_structure
-    sections:
-    - file: content/exercises/program_flow_and_structure_exercise
-  - file: content/basics/functions
-    sections:
-    - file: content/exercises/functions_exercise
-  - file: content/basics/oop
-    sections:
-    - file: content/exercises/oop_exercise
-  - file: content/exercises/exercises
-- caption: Scientific Computing
-  chapters:
-  - file: content/scientific_computing/numpy
-    sections:
-    - file: content/exercises/numpy_exercise
-  - file: content/scientific_computing/input_output
-    sections:
-    - file: content/exercises/input_output_exercise
-  - file: content/scientific_computing/visualization
+ 
