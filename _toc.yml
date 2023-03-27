@@ -26,12 +26,12 @@ parts:
     sections:
     - file: content/exercises/oop_exercise
   - file: content/exercises/exercises
-- caption: Scientific Computing
-  chapters:
-  - file: content/scientific_computing/numpy
-    sections:
-    - file: content/exercises/numpy_exercise
-  - file: content/scientific_computing/input_output
-    sections:
-    - file: content/exercises/input_output_exercise
-  - file: content/scientific_computing/visualization
+#- caption: Scientific Computing
+#  chapters:
+  #- file: content/scientific_computing/numpy
+  #  sections:
+  #  - file: content/exercises/numpy_exercise
+ # - file: content/scientific_computing/input_output
+  #  sections:
+  #  - file: content/exercises/input_output_exercise
+ # - file: content/scientific_computing/visualization

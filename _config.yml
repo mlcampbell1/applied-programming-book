@@ -5,6 +5,7 @@ author                      : Martin Claus
 copyright                   : 2020,  # Copyright year to be placed in the footer
 logo                        : "content/images/logo/logo.png"  # A path to the book logo
 exclude_patterns            : [content/LICENSE.md]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+only_build_toc_files        : true
 
 #######################################################################################
 # Execution settings
