@@ -3,14 +3,11 @@
 ## Cloudlab at CAU Kiel
 
 For the module "PherWiss: Angewandtes Programmieren" we will use a web-based interactive computing environment to do the exercises.
-The URL of the platform is https://cloudlab-ws21-01.rz.uni-kiel.de and it is based on [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/).
+It is based on [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/).
 The system is reachable from everywhere in the world, so no VPN connection to the universities network is necessary.
 I recommend to take a look at the [Jupyter Lab User Guide](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) to make yourself comfortable with the user interface.
 
-Access to the system is restricted to registered users.
-The user accounts are created and assigned during the first exercise class.
-The password for the accounts is set by you and it is the password that you enter when you first login.
-Please remember your password carefully, since password reset is not easily possible.
+Access to the system is restricted to participants in the OLAT group "pherwiss-II". You will find the start-up link in the OLAT page of the course.
 
 Please note that your account and all of your data will be deleted after the end of the second examination period of the summer term.
 Make a backup of all your data on your local machine by [downloading](https://jupyterlab.readthedocs.io/en/stable/user/files.html#uploading-and-downloading) all relevant files.
