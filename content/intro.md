@@ -14,7 +14,7 @@ Here is the content of the course
 
 ## Acknowledgements
 
-This book has been created by [Martin Claus][martin]. Edited by Megan and Morelia.
+This book has been created by Martin Claus. Edited and updated by Morelia Urlaub and Megan Campbell.
 
 [martin]: https://martinclaus.github.io/
 
