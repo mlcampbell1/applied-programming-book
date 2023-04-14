@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Applied Programming for Physics of the Earth System</title>
+    <title>Basics &#8212; Applied Programming for Physics of the Earth System</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -108,6 +108,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Basics
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -168,6 +180,29 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=lab/tree/content/basics/basics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudlab-ss22-01.rz.uni-kiel.de/hub/user-redirect/git-pull?repo=https://github.com/executablebooks/jupyter-book&urlpath=lab/tree/jupyter-book/content/basics/basics.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -177,7 +212,37 @@ const thebe_selector_output = ".output, .cell_output"
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#expressions">
+   Expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assigning-variables">
+   Assigning variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-help">
+   Getting Help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -188,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Basics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -197,7 +262,37 @@ const thebe_selector_output = ".output, .cell_output"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#expressions">
+   Expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assigning-variables">
+   Assigning variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-help">
+   Getting Help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -207,7 +302,366 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="basics">
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<p>This chapter introduces the basic and most common elements of a structured programming language. The structure of the chapter is</p>
+<ul class="simple">
+<li><p><span class="xref myst">Data Types</span> introduces the basics data types common to most programming languages and a few types that are special to python</p></li>
+<li><p><span class="xref myst">Program Flow</span> introduces constructs typical for structured programming languages such as branching and loops</p></li>
+<li><p><span class="xref myst">Functions</span> introduces the concept of functions for code re-usability and how in Python functions are defined</p></li>
+</ul>
+<p>Although we are using Python as an example language throughout this book, the general ideas are not specific or limited to Python.</p>
+<p>But before we dive in, let’s start with some fundamentals</p>
+<div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>Comments are lines in the source code that are not interpreted by the Python interpreter.
+Their purpose is solely to make the source code more readable and understandable for other programmer, but also for yourself.
+Typically, after a week or two, a programmer is not able to remember the details of an implementation he has coded himself.
+So comments help you to remember why you have chosen a particular solution to a problem.
+However, to many comments make the code less readable.
+So a good balance is needed.
+A general rule is to add comments where you made a non-trivial decision on a particular choice of implementation.</p>
+<p>In Python a comment starts with <code class="docutils literal notranslate"><span class="pre">#</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment</span>
+<span class="n">spam</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># second comment...</span>
+          <span class="c1"># ... and the third!</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;# this is NOT a comment!&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the last line does not contain a comment.
+Double or single quotes (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">'</span></code>) enclose a text sequence, typically called <code class="docutils literal notranslate"><span class="pre">string</span></code>, which we will learn more about in the next section.</p>
+</div>
+<div class="section" id="expressions">
+<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>Expressions are instructions that take input data, do some operation on it and possibly return some output data.
+Arithmetic expressions are an example of an expression.
+But also comparisons or the call to some function are expressions.</p>
+<p>In Python, expressions can be grouped using brackets and arithmetic expressions follow the same rules as one would expect such as the associative law and commutative law.</p>
+<p>Here are some examples:</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="mi">17</span> <span class="o">//</span> <span class="mi">3</span>
+<span class="mi">17</span> <span class="o">%</span> <span class="mf">3.0</span>
+<span class="mf">16.</span> <span class="o">**</span> <span class="mf">0.5</span>
+<span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="n">j</span>
+<span class="mf">5.</span> <span class="o">==</span> <span class="mi">5</span>
+<span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">8</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Logical expression, that are expression which are either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>, can be combined using logical operators such as <code class="docutils literal notranslate"><span class="pre">and</span></code> or <code class="docutils literal notranslate"><span class="pre">or</span></code>.</p>
+</div>
+<div class="section" id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>Here is a list of common operators available on numeric data, for a complete list of operator symbols have a look at the <a class="reference external" href="https://docs.python.org/3/library/operator.html#mapping-operators-to-functions">Python documentation</a>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>Summation</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>Subtraction</p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multiplication</p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>Division</p></td>
+</tr>
+<tr class="row-even"><td><p>//</p></td>
+<td><p>Explicit floor division</p></td>
+</tr>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>Modulo for division of integer operands</p></td>
+</tr>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>Exponentiation</p></td>
+</tr>
+<tr class="row-odd"><td><p>==</p></td>
+<td><p>Equal</p></td>
+</tr>
+<tr class="row-even"><td><p>!=</p></td>
+<td><p>Unequal</p></td>
+</tr>
+<tr class="row-odd"><td><p>+=, -=, *=, /=, //=, …</p></td>
+<td><p>Summation, subtraction etc. with simultaneous assignment</p></td>
+</tr>
+</tbody>
+</table>
+<p>Some of the operators such as <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> are also available for sequence data, but we will cover this later.
+As we will see in the section <span class="xref myst">object-oriented programming</span>, it is also possible to define a custom meaning of an operator symbol when defining your own data types by implementing special methods.</p>
+</div>
+<div class="section" id="assigning-variables">
+<h2>Assigning variables<a class="headerlink" href="#assigning-variables" title="Permalink to this headline">¶</a></h2>
+<p>Variables are symbols, which represent data in the memory. Data can be assigned to symbols with the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">9</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mf">4.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assignments can be used straightforward for further calculations. The names, or symbols, defined in the assignment statements above, are used as placeholders for the data they are assigned to.</p>
+<div class="cell tag_remove_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+<span class="n">width</span> <span class="o">*</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Variables can also be assigned expressions that may contain variables too.</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Multiple assignments in one line are also possible</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">3.</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To inspect the content of an assigned variable, we can use the <a class="reference external" href="https://docs.python.org/3/library/functions.html#print"><code class="docutils literal notranslate"><span class="pre">print()</span></code></a> function, to output the content of the variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>900
+1 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>In an interactive session, such as Jupyter Lab, simply putting the variable name on the last line will also output the content of the variable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
+<p>Reading the documentation of the programming language and software packages frequent task of a programmer.
+Nobody is expected to memorize all the details on how some function is exactly invoked and the names of all of its arguments.
+Therefore, it is important to quickly find the information you need to continue to be productive.
+The <a class="reference external" href="https://ipython.org/">IPython</a> interpreter that is running under the hood of Python Jupyter kernels offers a very convenient way of accessing documentation to functions, modules, packages or simply assigned variables.
+Put a question mark <code class="docutils literal notranslate"><span class="pre">?</span></code> right after the name you want to know something about.
+To learn something about the <code class="docutils literal notranslate"><span class="pre">print</span></code> function, use</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Docstring:</span>
+print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
+
+Prints the values to a stream, or to sys.stdout by default.
+Optional keyword arguments:
+file:  a file-like object (stream); defaults to the current sys.stdout.
+sep:   string inserted between values, default a space.
+end:   string appended after the last value, default a newline.
+flush: whether to forcibly flush the stream.
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<p>or</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get some information about the variable <code class="docutils literal notranslate"><span class="pre">area</span></code>, do</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>area<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Type:</span>        int
+<span class=" -Color -Color-Red">String form:</span> 900
+<span class=" -Color -Color-Red">Docstring:</span>  
+int([x]) -&gt; integer
+int(x, base=10) -&gt; integer
+
+Convert a number or string to an integer, or return 0 if no arguments
+are given.  If x is a number, return x.__int__().  For floating point
+numbers, this truncates towards zero.
+
+If x is not a number or if base is given, then x must be a string,
+bytes, or bytearray instance representing an integer literal in the
+given base.  The literal can be preceded by &#39;+&#39; or &#39;-&#39; and be surrounded
+by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
+Base 0 means to interpret the base from the string as an integer literal.
+&gt;&gt;&gt; int(&#39;0b100&#39;, base=0)
+4
+</pre></div>
+</div>
+</div>
+</div>
+<p>The information you are getting on the variable is actually the documentation of the data type of that variable.</p>
+<p>When you start to feel comfortable using Python, it is also very beneficial to take a look at the <a class="reference external" href="https://docs.python.org/3/index.html">Python documentation</a> to get a broader and deeper understanding about the language itself.</p>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>Errors and mistakes are an essential part of the programming process.
+However, one has to distinguish between errors you as a programmer are doing and errors the users of your software might do.
+Let us concentrate on the first type of errors: coding errors (or bugs).</p>
+<p>Do not be disappointed if you code does not work at the first time.
+It almost never does, either because your syntax is not correct (a <em>syntax error</em>) or your code tries to do something that is not well-defined (an <em>exception</em>)
+Most languages, and also Python, do have some mechanism to deal with errors that occur during the runtime of the program.
+If the Python interpreter encounters some error it raises an exception.
+An exception raised due to a syntax error may look like this</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="n">when</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">9</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-1-933321c6757f&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="n">when</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">9</span>
+          <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code raises a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> exception, since Python does not know a <code class="docutils literal notranslate"><span class="pre">when</span></code> key word.
+The <code class="docutils literal notranslate"><span class="pre">^</span></code> symbol in the output points to the exact location where the syntax is wrong.
+This greatly helps to find typos in your code.</p>
+<p>But there are a lot more exceptions, such as arithmetic exceptions, raised if an invalid operation occurs:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">51</span><span class="n">f8442ebea1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we try to divide by zero which is a not well-defined mathematical operation.
+Hence, the interpreter complains and in the output the <code class="docutils literal notranslate"><span class="pre">----&gt;</span></code> marks the line in the code where the interpreter raised the exception.
+Note that in many cases, unlike in this simple example, the occurrence of an exception depends on the conditions at runtime, i.e. when the program is executed.
+Such conditions could be the data that are fed into the program, which may be different for each execution.</p>
+<p>Often, when we use functions or packages, the exception is raised inside some function that may not even be part of our own code.
+To still be able to identify the origin of the issue, the Python interpreter provides a <em>traceback</em>, that is a list of all lines that are executed until the program went wrong.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">function2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">c</span>
+
+<span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">outer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">bfb4d7ae17ad</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">result</span> <span class="o">=</span> <span class="n">outer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-22-bfb4d7ae17ad&gt;</span> in <span class="ni">outer</span><span class="nt">(a, b)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">c</span> <span class="o">=</span> <span class="n">function2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">return</span> <span class="n">c</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+
+<span class="nn">&lt;ipython-input-21-9e9aa47843e7&gt;</span> in <span class="ni">function2</span><span class="nt">(a, b)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">function2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">result</span> <span class="o">=</span> <span class="n">function1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this example, two functions, <code class="docutils literal notranslate"><span class="pre">outer</span></code> and <code class="docutils literal notranslate"><span class="pre">inner</span></code> are defined where <code class="docutils literal notranslate"><span class="pre">outer</span></code> is simply calling <code class="docutils literal notranslate"><span class="pre">inner</span></code> with it’s own parameters.
+In the last line, we call <code class="docutils literal notranslate"><span class="pre">outer</span></code> with the parameters <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+In the last block of the traceback, we can see that the exception has been raised within the function <code class="docutils literal notranslate"><span class="pre">inner</span></code>.
+The second last block tells us, that the function <code class="docutils literal notranslate"><span class="pre">inner</span></code> has been called within the function <code class="docutils literal notranslate"><span class="pre">outer</span></code>.
+And finally, in the first block we see that the function <code class="docutils literal notranslate"><span class="pre">outer</span></code> has been called in the eighth line of the cell with the arguments <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+Hence, a traceback is best read backwards, allowing to trace the occurrence of an error back to it’s origin.</p>
+<p>Note that for the syntax error, the output looks different.
+The reason is that the syntax error is raised while the interpreter reads the source code and before the code is executed.
+All other exceptions are raised during the execution of the program.
+See the <a class="reference external" href="https://docs.python.org/3/tutorial/errors.html">Pyhon documentation</a> to learn more about errors and exceptions and how to deal with them.</p>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
