@@ -1,0 +1,76 @@
+{
+  "id" : "10246db9-cef4-4387-a9c6-0198413380d3",
+  "type" : "Observation-Collection",
+  "href" : "https://cdc.dwd.de/portal/shortlink/10246db9-cef4-4387-a9c6-0198413380d3",
+  "member" : [ {
+    "type" : "Observation",
+    "phenomenonTime" : {
+      "timePeriod" : {
+        "beginPosition" : "1900-01-01",
+        "endPosition" : "2022-12-31"
+      }
+    },
+    "procedure" : {
+      "id" : "OBS_DEU_P1D_T2M",
+      "uuid" : "432300706574",
+      "href" : "urn:x-wmo:md:de.dwd.cdc::OBS_DEU_P1D_T2M",
+      "title" : "Daily station observations of mean temperature at 2 m above ground in °C",
+      "uom" : "°C"
+    },
+    "featureOfInterest" : {
+      "id" : "2564",
+      "uuid" : "812300199719",
+      "href" : "https://cdc.dwd.de/rest/metadata/station/html/812300199719",
+      "title" : "Kiel-Holtenau"
+    },
+    "result" : {
+      "type" : "DataArray",
+      "count" : 13217,
+      "record" : {
+        "fields" : [ {
+          "ix" : 1,
+          "name" : "Produkt_Code",
+          "type" : "string",
+          "description" : "reference to procedure.id"
+        }, {
+          "ix" : 2,
+          "name" : "SDO_ID",
+          "type" : "string",
+          "description" : "reference to featureOfInterest.id"
+        }, {
+          "ix" : 3,
+          "name" : "Zeitstempel",
+          "type" : "datetime",
+          "uom" : {
+            "href" : "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
+            "title" : ""
+          }
+        }, {
+          "ix" : 4,
+          "name" : "Wert",
+          "type" : "double",
+          "description" : "value of the procedure at specified point in time in the procuedure.uom"
+        }, {
+          "ix" : 5,
+          "name" : "Qualitaet_Niveau",
+          "type" : "string",
+          "uom" : {
+            "href" : "https://cdc.dwd.de/skos/taxon/qs/Qualitaetsniveau",
+            "title" : ""
+          }
+        }, {
+          "ix" : 6,
+          "name" : "Qualitaet_Byte",
+          "type" : "string",
+          "uom" : {
+            "href" : "https://cdc.dwd.de/skos/taxon/qs/Qualitaetsbyte",
+            "title" : ""
+          }
+        } ]
+      },
+      "values" : {
+        "href" : "data/data_OBS_DEU_P1D_T2M_2564.csv"
+      }
+    }
+  } ]
+}
