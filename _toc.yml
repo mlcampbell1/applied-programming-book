@@ -13,7 +13,7 @@ parts:
   - file: content/basics/primitive_data_types
   #  sections:
  #   - file: content/exercises/primitive_data_types_exercise
- # - file: content/basics/sequences
+  - file: content/basics/sequences
  #   sections:
  #   - file: content/exercises/sequences_exercise
  # - file: content/basics/program_flow_and_structure
