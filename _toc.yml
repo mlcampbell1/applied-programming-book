@@ -19,7 +19,7 @@ parts:
   - file: content/basics/program_flow_and_structure
  #   sections:
  #   - file: content/exercises/program_flow_and_structure_exercise
- # - file: content/basics/functions
+  - file: content/basics/functions
  #   sections:
  #   - file: content/exercises/functions_exercise
  # - file: content/basics/oop
