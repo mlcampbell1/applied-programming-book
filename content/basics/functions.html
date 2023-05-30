@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions &#8212; Applied Programming for Physics of the Earth System</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Program Flow and Structure" href="program_flow_and_structure.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Applied Programming for Physics of the Earth System</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../work_environments.html">
+   Interactive Work Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../programming_languages.html">
+   What is a Programming Language
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Basics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="primitive_data_types.html">
+   Primitive Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sequences.html">
+   Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="program_flow_and_structure.html">
+   Program Flow and Structure
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/basics/functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=lab/tree/content/basics/functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudlab-ss22-01.rz.uni-kiel.de/hub/user-redirect/git-pull?repo=https://github.com/executablebooks/jupyter-book&urlpath=lab/tree/jupyter-book/content/basics/functions.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-functions">
+   Defining functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arguments-and-parameters">
+   Arguments and Parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#positional-arguments">
+     Positional arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyword-arguments">
+     Keyword arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#default-values">
+     Default values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-number-of-parameters">
+     Variable number of parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Functions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-functions">
+   Defining functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arguments-and-parameters">
+   Arguments and Parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#positional-arguments">
+     Positional arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyword-arguments">
+     Keyword arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#default-values">
+     Default values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-number-of-parameters">
+     Variable number of parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">myturtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<p>In one of the previous examples we have seen that data, which is used at different parts of the code, should be represented by a named variable. The same holds for code structures which repeatedly process the same or similar data. This can be achieved by defining <em>functions</em>. It prevents redundancy in the code and makes the code more readable and maintainable.</p>
+<div class="section" id="defining-functions">
+<h2>Defining functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">¶</a></h2>
+<p>Every definition of a function starts with the <em>function signiture</em>. The signature starts with the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code>, followed by the name of the function and the definition of possible arguments in round brackets, and ends with a colon. The signature is followed by the indented <em>body</em> of the function, consisting of at least one command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After a function is defined, it can be <em>called</em>. It is important to use the round brackets, even if the function does not need any argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hello_world</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world
+</pre></div>
+</div>
+</div>
+</div>
+<p>Functions always return a value. This value can be defined with the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code>. If no return value is defined, the function returns <a class="reference external" href="https://docs.python.org/3.7/library/constants.html#None"><code class="docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+<p>The following function does not print the string “Hello world” but it will return it when called.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world_string</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello world&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is also possible to return multiple objects by writing them as tuples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">give_words</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;ham&quot;</span><span class="p">,</span> <span class="s2">&quot;spam&quot;</span><span class="p">,</span> <span class="s2">&quot;eggs&quot;</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="n">give_words</span><span class="p">()</span>       <span class="c1"># This is a tuple with three elements</span>
+<span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">w3</span> <span class="o">=</span> <span class="n">give_words</span><span class="p">()</span>  <span class="c1"># Directly unpackes the tuple</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>An important task in programming is the documentation of your code, that is to describe in words, what it does and how one uses it. In Python, this is done by writing <em>docstrings</em> into the code. For functions, the docstring is a string at the beginning of the function body. Usually it is a multiline string , enclosed by three quotation marks <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>. This string is returned by the <a class="reference external" href="https://docs.python.org/3/library/functions.html#help"><code class="docutils literal notranslate"><span class="pre">help()</span></code></a> function.</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world_string</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the string &quot;Hello World&quot;.&quot;&quot;&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">hello_world_string</span><span class="p">)</span>
+<span class="c1"># or</span>
+hello_world_string<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function hello_world_string in module __main__:
+
+hello_world_string()
+    Returns the string &quot;Hello World&quot;.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span> hello_world_string<span class=" -Color -Color-Blue">()</span>
+<span class=" -Color -Color-Red">Docstring:</span> Returns the string &quot;Hello World&quot;.
+<span class=" -Color -Color-Red">File:</span>      ~/Documents/applied-programming-book/content/basics/&lt;ipython-input-13-44357a835bb6&gt;
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
+<p>When a function is defined, it is an object as any other variable. Thus it can be allocated to another variable or passed to other functions as an argument.</p>
+</div>
+<div class="section" id="arguments-and-parameters">
+<h2>Arguments and Parameters<a class="headerlink" href="#arguments-and-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Functions are used to execute a once defined sequence of tasks on some set of data that can be different from execution to execution. This data is <em>passed</em> to the function via arguments when calling the function. The names of the arguments that are used within the function body are called <em>parameters</em> and are defined in the round brackets within the function signature. For Python, arguments do not have a defined type, it can change during the runtime of the program. Hence, the language is dynamically typed.</p>
+<p>When calling a function in Python, arguments can either be passed as <em>positional arguments</em> or <em>keyword arguments</em>.</p>
+<div class="section" id="positional-arguments">
+<h3>Positional arguments<a class="headerlink" href="#positional-arguments" title="Permalink to this headline">¶</a></h3>
+<p>Positional arguments are used by simply giving the value of the argument when calling a function. The example below uses positional arguments when calling the function <code class="docutils literal notranslate"><span class="pre">greet</span></code>. Note that the type of the arguments differ in both calls to the function.</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Martin&quot;</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Martin
+Hello 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>A function can also take multiple arguments. The arguments and the corresponding parameters are given as a comma separated list in the function call and its’ signature, respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7142857142857143
+1.4
+</pre></div>
+</div>
+</div>
+</div>
+<p>The example above illustrates why it is called positional arguments. It is the position of the values in the function call that determines which variables they are assigned to in the function body.</p>
+</div>
+<div class="section" id="keyword-arguments">
+<h3>Keyword arguments<a class="headerlink" href="#keyword-arguments" title="Permalink to this headline">¶</a></h3>
+<p>Arguments can also be passed as <code class="docutils literal notranslate"><span class="pre">key=value</span></code> pairs which enhances the readability of the code. Using keyword arguments allows to neglect the order of arguments as given by the function signature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="n">numerator</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">denominator</span><span class="o">=</span><span class="mf">6.</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="n">denominator</span><span class="o">=</span><span class="mf">6.</span><span class="p">,</span> <span class="n">numerator</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+0.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also mix the use of positional and keyword arguments. However, we then have to put the positional arguments first followed by the keyword arguments. In any case, the association between the arguments and parameters must be unambiguous.</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">denominator</span><span class="o">=</span><span class="mi">6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="n">nominator</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1">## this is a syntax error</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-28-50a9eacaf465&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="n">nominator</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1">## this is a syntax error</span>
+                           <span class="o">^</span>
+<span class="ne">SyntaxError</span>: positional argument follows keyword argument
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">nominator</span><span class="o">=</span><span class="mi">6</span><span class="p">))</span>  <span class="c1"># this is a type error</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">27</span><span class="o">-</span><span class="mi">7691</span><span class="n">ef50def9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">nominator</span><span class="o">=</span><span class="mi">6</span><span class="p">))</span>  <span class="c1"># this is a type error</span>
+
+<span class="ne">TypeError</span>: div() got an unexpected keyword argument &#39;nominator&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="default-values">
+<h3>Default values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h3>
+<p>Often one would like to define a default value for a certain parameter. This can be done with an assignment in the function signature. When calling the function, we may then omit the argument that has a default value defined.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;How do you do?&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function greets to the person with the provided message.</span>
+
+<span class="sd">    If message is not provided, it defaults to &quot;How do you do?&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello </span><span class="si">{}</span><span class="s2">. </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">msg</span><span class="p">))</span>
+    
+<span class="n">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bruce&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Good morning!&quot;</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bruce&quot;</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Bruce&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Good morning!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Bruce. Good morning!
+Hello Bruce. How do you do?
+Hello Bruce. Good morning!
+</pre></div>
+</div>
+</div>
+</div>
+<p>To have an unambiguous map between arguments and parameters all parameters having a default value must be at the end of the parameter list in the function signature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-32-83f329bb83cb&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+            <span class="o">^</span>
+<span class="ne">SyntaxError</span>: non-default argument follows default argument
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The evaluation of the assignment expression in the function signature happens only once when the interpreter reads the function signature.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">def</span> <span class="nf">sum_5</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_5</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_5</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When a <code class="docutils literal notranslate"><span class="pre">mutable</span></code> data type is used as the default value a reference is set to it. Hence, the default value can change during runtime which is commonly considered <strong>undesired behavior</strong>! Thus <strong>never use a <code class="docutils literal notranslate"><span class="pre">mutable</span></code> data type as a default!</strong></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">append_element</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">l</span> <span class="o">+</span> <span class="p">[</span><span class="n">e</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">append_element</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">append_element</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">append_element</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 5]
+[1, 6]
+[1]
+[6, 5]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variable-number-of-parameters">
+<h3>Variable number of parameters<a class="headerlink" href="#variable-number-of-parameters" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to define a function which accepts a variable number of arguments. To have access to these variable parameters, there is the <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> notation in the function signature. <code class="docutils literal notranslate"><span class="pre">*</span></code> is used for positional arguments and a <code class="docutils literal notranslate"><span class="pre">**</span></code> is used for keyword arguments and these are always at the end of the parameter list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func_pos_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">func_kw_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">func_general_varargs</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="s1">&#39;some value&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arg2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arg3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the examples above, <code class="docutils literal notranslate"><span class="pre">args</span></code> is a tuple of all additional positional arguments that have been passed to the function. <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> is a dictionary mapping the keys to the values of all additional keyword arguments given in the function call. Additional here means that these arguments do not match a parameter that is explicitly defined in the function signature.</p>
+<p>Using an analogous notation, a sequence or a dictionary of arguments can be passed to a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">))</span>
+
+<span class="n">numbers_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="o">**</span><span class="n">numbers_dict</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+9
+</pre></div>
+</div>
+</div>
+</div>
+<p>This allows, for example, the definition of <em>function wrappers</em>. The following function <code class="docutils literal notranslate"><span class="pre">wrapper</span></code> accepts any function as first argument and calls it after the <code class="docutils literal notranslate"><span class="pre">print</span></code> command with the given arguments:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;Function </span><span class="si">{}</span><span class="s2"> executed with Arguments </span><span class="si">{}</span><span class="s2"> and </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">return_value</span>
+
+<span class="n">wrapper</span><span class="p">(</span><span class="nb">sum</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function sum executed with Arguments (2,) and {&#39;b&#39;: 3}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h2>
+<p>The <em>scope</em> defines the visibility of a name (object) within a block of code. Names which are used in their own scope are called <em>local</em>. Names from an enclosing scope are called <em>global</em>. The local scope always supersedes the global scope. This means for functions:</p>
+<ul class="simple">
+<li><p>Names that are <strong>defined outside</strong> the function body are <strong>visible</strong> within the function body as global variables.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;I love Paris!&#39;</span>
+<span class="n">f</span><span class="p">()</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;I love London!&#39;</span>
+<span class="n">f</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I love Paris!
+I love London!
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Names that are <strong>defined within</strong> the function body, are <strong>not visible</strong> outside.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">city</span><span class="p">):</span>
+    <span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;I love </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+
+<span class="n">f</span><span class="p">(</span><span class="s1">&#39;Paris&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>   <span class="c1"># This throws a name error</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I love Paris
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">44</span><span class="o">-</span><span class="n">b3ce25f1140c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">f</span><span class="p">(</span><span class="s1">&#39;Paris&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>   <span class="c1"># This throws a name error</span>
+
+<span class="ne">NameError</span>: name &#39;s2&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Is a name defined both inside and outside, the <strong>local</strong> definition supersedes the global within the function body.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s3</span> <span class="o">=</span> <span class="s2">&quot;I hate </span><span class="si">{}</span><span class="s2">&quot;</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">city</span><span class="p">):</span>
+    <span class="n">s3</span> <span class="o">=</span> <span class="s2">&quot;I love </span><span class="si">{}</span><span class="s2">&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">city</span><span class="p">))</span>
+    
+<span class="n">f</span><span class="p">(</span><span class="s1">&#39;Paris&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Paris&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I love Paris
+I hate Paris
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>In principal it is possible to change global variables within the function body, if they are <code class="docutils literal notranslate"><span class="pre">mutable</span></code>. Such a function is called to have side effects. Usually this is <strong>not desired</strong>, since this can lead to errors, that are hard to identify. This also applies to <code class="docutils literal notranslate"><span class="pre">mutable</span></code> arguments passed to a function.</p></li>
+<li><p>Python also offers the possibility to change global <code class="docutils literal notranslate"><span class="pre">immutable</span></code> variables within the function body. Therefore the keyword <code class="docutils literal notranslate"><span class="pre">global</span></code> is introduced. For the same reasons as above, this is not recommended!</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="program_flow_and_structure.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Program Flow and Structure</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Martin Claus<br/>
+    
+        &copy; Copyright 2020,.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
