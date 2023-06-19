@@ -31,7 +31,7 @@ parts:
   - file: content/scientific_computing/numpy
   #  sections:
   #  - file: content/exercises/numpy_exercise
- # - file: content/scientific_computing/input_output
+  - file: content/scientific_computing/input_output
   #  sections:
   #  - file: content/exercises/input_output_exercise
  # - file: content/scientific_computing/visualization
