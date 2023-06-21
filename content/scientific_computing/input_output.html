@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Input and Output &#8212; Applied Programming for Physics of the Earth System</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Numpy" href="numpy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Applied Programming for Physics of the Earth System</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../work_environments.html">
+   Interactive Work Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../programming_languages.html">
+   What is a Programming Language
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/primitive_data_types.html">
+   Primitive Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/sequences.html">
+   Sequences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/program_flow_and_structure.html">
+   Program Flow and Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics/functions.html">
+   Functions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Scientific Computing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Input and Output
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/scientific_computing/input_output.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=lab/tree/content/scientific_computing/input_output.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://cloudlab-ss22-01.rz.uni-kiel.de/hub/user-redirect/git-pull?repo=https://github.com/executablebooks/jupyter-book&urlpath=lab/tree/jupyter-book/content/scientific_computing/input_output.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-format">
+   Data format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csv">
+   CSV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#netcdf">
+   NETCDF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structure-of-a-netcdf-data-set">
+     Structure of a NetCDF data set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-data">
+     Reading data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-of-netcdf-data-sets">
+     Writing of NetCDF data sets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-formats">
+   Other formats
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Input and Output</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-format">
+   Data format
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csv">
+   CSV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#netcdf">
+   NETCDF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structure-of-a-netcdf-data-set">
+     Structure of a NetCDF data set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-data">
+     Reading data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-of-netcdf-data-sets">
+     Writing of NetCDF data sets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-formats">
+   Other formats
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-input-and-output">
+<h1>Data Input and Output<a class="headerlink" href="#data-input-and-output" title="Permalink to this headline">¶</a></h1>
+<p>The main application of Python or any other programming language in your future career will be the processing and analysis of data.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">netCDF4</span> <span class="k">as</span> <span class="nn">nc</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="../../_images/8_data_life_cycle.png" /></p>
+<p>You will use both self-collected (simulations, measurements) and already existing data.
+To share and to make data available is therefore a key element of scientific practice.
+Already when processing self-collected data, you should therefore keep in mind to describe them completely with their <a class="reference external" href="https://en.wikipedia.org/wiki/Metadata">metadata</a>.
+Metadata is data about data, such as the units of the measured quantities, details about factors influencing the data or contact details.
+Without the metadata, the data itself is not interpretable.</p>
+<p><strong>Bad example:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+----------------------------------------------------------
+1.2| 2.34|  4.6| 2.31|567.1|45.24| 4.63|1.855|  4.2|  1.5|
+</pre></div>
+</div>
+<p><strong>Good example:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Incubator experiment No. 3456
+Date: 13.03.2018
+Contact: Martin Claus &lt;mclaus@geomar.de&gt;
+Bacteria: Escherichia coli
+Substrate: Agar plates
+Cultivation: 10 days following Aaronson et al. (2017)
+
+temperature [°C]   |   0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+-----------------------------------------------------------------------------
+growth rate [1/day]| 1.2| 2.34|  4.6| 2.31|567.1|45.24| 4.63|1.855|  4.2|  1.5|
+</pre></div>
+</div>
+<p>The data in both example are the same. However, the bad example is not understandable and interpretable for anybody who was not involved in the experiment.</p>
+<div class="section" id="data-format">
+<h2>Data format<a class="headerlink" href="#data-format" title="Permalink to this headline">¶</a></h2>
+<p>The data format declares the way, how data is structured and how it should be interpreted when processed. Generally one can classify as</p>
+<ul class="simple">
+<li><p>Self-describing data formats: the datasets contain both the data and their metadata</p></li>
+<li><p>Non-self-describing data formats: the metadata is separated from the actual data</p></li>
+</ul>
+<p>Further one can classify by the storage format of the actual data:</p>
+<ul class="simple">
+<li><p>Binary data formats:
+Data is saved in binary form as they are represented in the memory. The respective type of the data (e.g. 64 byte float or 8 byte integer) is part of the metadata and needs to be known.</p></li>
+<li><p>Text-based data formates:
+The information is encoded as text characters, e.g. using <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>.
+The encoding and structure of the data is part of the metadata and must be known.</p></li>
+</ul>
+<p>Generally it is advisable to use self-describing data formats, because they can be shared easily and are self-containing.
+If you use non-self-describing data formats, the metadata that is necessary to correctly interpret the data must be provided separately and may get lost.</p>
+<p>In the following we will have a closer look on two very common data formats:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> (Comma-Separated Values): Text based data format for data in tabular form</p></li>
+<li><p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a> (Network Common Data Form): self-descriptive, binary data format for multidimensional arrays</p></li>
+</ul>
+</div>
+<div class="section" id="csv">
+<h2>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h2>
+<p>As an example we use the <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/hurrell-north-atlantic-oscillation-nao-index-station-based">Hurrel North Atlantic Oscillation Index (station based)</a>. The content of this text-file has the following structure:</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>../../data/nao_station_monthly.txt
+<span class="o">!</span><span class="nb">echo</span><span class="w"> </span>...
+<span class="o">!</span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>../../data/nao_station_monthly.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Hurrell Station-Based Monthly NAO Index
+year   Jan   Feb   Mar   Apr   May   Jun   Jul   Aug   Sep   Oct   Nov   Dec
+1865  -0.6  -1.2   0.2  -0.2  -0.4   0.0   0.5   1.5   1.8  -2.0  -0.9   0.8
+1866   0.5   0.8  -0.6  -2.3  -2.0   0.9  -0.5  -0.2   2.4  -0.3  -0.5   0.2
+1867  -3.5   1.1  -4.3   1.8  -4.2   0.1  -2.0   1.9   1.4   2.2  -3.5  -0.1
+...
+2015   3.5   2.4   3.1  -0.1   1.9  -0.7  -2.3   1.0  -1.6  -0.6   2.7   0.8
+2016   0.0   2.4   1.4  -1.7  -0.8  -0.2   0.4   0.2   2.8  -1.2   1.0   0.9
+2017  -0.4   1.2   1.5  -1.0  -2.4   1.4   1.8   0.3   2.3   0.7  -1.2   0.8
+2018   2.4   0.9  -1.0   1.2 -999. -999. -999. -999. -999. -999. -999. -999.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The structure of the data is the following:</p>
+<ul class="simple">
+<li><p>2 Headlines</p></li>
+<li><p>13 columns (year, Jan., Feb., …)</p></li>
+<li><p>missing values are marked by <code class="docutils literal notranslate"><span class="pre">-999.</span></code></p></li>
+</ul>
+<p>To load the data into memory, we can use the function <a class="reference external" href="https://numpy.org/doc/stable/user/basics.io.genfromtxt.html">numpy.genfromtxt</a>. If we do not have any missing values we can alternatively use <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html#numpy.loadtxt">numpy.loadtxt</a>.</p>
+<div class="cell tag_hide_output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+    <span class="s1">&#39;../../data/nao_station_monthly.txt&#39;</span><span class="p">,</span>
+    <span class="n">skip_header</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">missing_values</span><span class="o">=</span><span class="s1">&#39;-999.&#39;</span><span class="p">,</span>
+    <span class="n">usemask</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1865.0 -0.6 -1.2 ... -2.0 -0.9 0.8]
+ [1866.0 0.5 0.8 ... -0.3 -0.5 0.2]
+ [1867.0 -3.5 1.1 ... 2.2 -3.5 -0.1]
+ ...
+ [2016.0 0.0 2.4 ... -1.2 1.0 0.9]
+ [2017.0 -0.4 1.2 ... 0.7 -1.2 0.8]
+ [2018.0 2.4 0.9 ... -- -- --]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The parameter <code class="docutils literal notranslate"><span class="pre">missing_values</span></code> may be given for <a class="reference external" href="https://numpy.org/doc/stable/user/basics.io.genfromtxt.html#missing-values">all data or for individual columns</a>. The values matching the <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> string are by default replaced with the value of the <code class="docutils literal notranslate"><span class="pre">filling_values</span></code> argument. To actually <a class="reference external" href="https://numpy.org/doc/stable/user/basics.io.genfromtxt.html#usemask">mask the missing values</a>, we need to pass <code class="docutils literal notranslate"><span class="pre">usemask=True</span></code>.</p>
+</div>
+<p>The result of <code class="docutils literal notranslate"><span class="pre">numpy.genfromtxt</span></code> is a 2D numpy array or MaskedArray that contains all the numerical values of the table in the file.</p>
+</div>
+<div class="section" id="netcdf">
+<h2>NETCDF<a class="headerlink" href="#netcdf" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/docs/user_guide.html">NetCDF</a> is a data format for array-based, multidimensional, binary data. It is self-describing.
+NetCDF is also a collection of libraries and tools to open and work with NetCDF files.
+NetCDF is the standard data format for data exchange and archiving in many scientific disciplines, such as earth system science, computational fluid dynamics, plasma physics, astrophysics and many more.</p>
+<div class="section" id="structure-of-a-netcdf-data-set">
+<h3>Structure of a NetCDF data set<a class="headerlink" href="#structure-of-a-netcdf-data-set" title="Permalink to this headline">¶</a></h3>
+<p>To display the content or the structure of a NetCDF data set, the command <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/docs/netcdf_utilities_guide.html#ncdump_guide">ncdump</a> can be used in the linux command line.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The length of the dimension <code class="docutils literal notranslate"><span class="pre">time</span></code> is <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code>.
+This means, that the length of this dimension is variable and can be extended at any time.
+This is very handy when writing data sets.
+When reading (in particular large) data sets, this may cause a sever loss of performance.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump<span class="w"> </span>-h<span class="w"> </span>../../data/CRUTEM.4.6.0.0.anomalies.nc
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf CRUTEM.4.6.0.0.anomalies {
+dimensions:
+	latitude = 36 ;
+	longitude = 72 ;
+	time = UNLIMITED ; // (2029 currently)
+	field_status_string_length = 1 ;
+variables:
+	float latitude(latitude) ;
+		latitude:standard_name = &quot;latitude&quot; ;
+		latitude:long_name = &quot;latitude&quot; ;
+		latitude:point_spacing = &quot;even&quot; ;
+		latitude:units = &quot;degrees_north&quot; ;
+		latitude:axis = &quot;Y&quot; ;
+	float longitude(longitude) ;
+		longitude:standard_name = &quot;longitude&quot; ;
+		longitude:long_name = &quot;longitude&quot; ;
+		longitude:point_spacing = &quot;even&quot; ;
+		longitude:units = &quot;degrees_east&quot; ;
+		longitude:axis = &quot;X&quot; ;
+	float time(time) ;
+		time:standard_name = &quot;time&quot; ;
+		time:long_name = &quot;time&quot; ;
+		time:units = &quot;days since 1850-1-1 00:00:00&quot; ;
+		time:calendar = &quot;gregorian&quot; ;
+		time:axis = &quot;T&quot; ;
+	float temperature_anomaly(time, latitude, longitude) ;
+		temperature_anomaly:long_name = &quot;temperature_anomaly&quot; ;
+		temperature_anomaly:units = &quot;K&quot; ;
+		temperature_anomaly:missing_value = -1.e+30f ;
+		temperature_anomaly:_FillValue = -1.e+30f ;
+		temperature_anomaly:reference_period = 1961s, 1990s ;
+	char field_status(time, field_status_string_length) ;
+		field_status:long_name = &quot;field_status&quot; ;
+
+// global attributes:
+		:title = &quot;CRUTEM4 temperature anomalies&quot; ;
+		:institution = &quot;Climatic Research Unit, University of East Anglia/Met Office Hadley Centre&quot; ;
+		:history = &quot;&quot; ;
+		:source = &quot;&quot; ;
+		:comment = &quot;&quot; ;
+		:reference = &quot;Jones, P. D., D. H. Lister, T. J. Osborn, C. Harpham, M. Salmon, and C. P. Morice (2012), Hemispheric and large-scale land-surface air temperature variations: An extensive revision and an update to 2010, J. Geophys. Res., 117, D05127, doi:10.1029/2011JD017139&quot; ;
+		:version = &quot;CRUTEM.4.6.0.0&quot; ;
+		:Conventions = &quot;CF-1.0&quot; ;
+}
+</pre></div>
+</div>
+</div>
+</div>
+<p>From this output the general structure of a data set becomes apparent:</p>
+<ul>
+<li><p><em>Dimensions</em> have a name and a length. To add coordinates to a dimension, variables with the same name may exist.</p></li>
+<li><p><em>Variables</em> have</p>
+<ul class="simple">
+<li><p>a data type (float, char, int)</p></li>
+<li><p>a name</p></li>
+<li><p>a shape, defined by a tuple of dimensions</p></li>
+<li><p>attributes</p></li>
+</ul>
+<p>The actual data is stored as variables.</p>
+</li>
+<li><p>Global attributes</p></li>
+</ul>
+<p>All attributes have a name, a data type and a value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Default names and values of attributes and variables for climate related data sets are defined in the <a class="reference external" href="http://cfconventions.org/">Climate and Forecast Metadata Conventions (CF conventions)</a>.
+By following the CF conventions, data sets become machine interpretable. For example, a geospatially referenced data set is automatically plotted on a map with coastlines by the software <a class="reference external" href="http://meteora.ucsd.edu/~pierce/ncview_home_page.html">ncview</a>.</p>
+</div>
+<p>Now we will open the data set with the <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/index.html">netCDF4</a> package, by creating an object of the class <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/index.html#netCDF4.Dataset">netCDF4.Dataset</a>. We can inspect the structure of the data set by printing the object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s1">&#39;../../data/CRUTEM.4.6.0.0.anomalies.nc&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;
+root group (NETCDF3_CLASSIC data model, file format NETCDF3):
+    title: CRUTEM4 temperature anomalies
+    institution: Climatic Research Unit, University of East Anglia/Met Office Hadley Centre
+    history: 
+    source: 
+    comment: 
+    reference: Jones, P. D., D. H. Lister, T. J. Osborn, C. Harpham, M. Salmon, and C. P. Morice (2012), Hemispheric and large-scale land-surface air temperature variations: An extensive revision and an update to 2010, J. Geophys. Res., 117, D05127, doi:10.1029/2011JD017139
+    version: CRUTEM.4.6.0.0
+    Conventions: CF-1.0
+    dimensions(sizes): latitude(36), longitude(72), time(2029), field_status_string_length(1)
+    variables(dimensions): float32 latitude(latitude), float32 longitude(longitude), float32 time(time), float32 temperature_anomaly(time,latitude,longitude), |S1 field_status(time,field_status_string_length)
+    groups: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>All the data and metadata of the data set are available as an attribute of the data set object. The most important attributes are <code class="docutils literal notranslate"><span class="pre">dimensions</span></code> and <code class="docutils literal notranslate"><span class="pre">variables</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">dimensions</span></code> attribute is a dictionary mapping the dimension names on objects of the class <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/index.html#netCDF4.Dimension">Dimension</a>. These objects can be used to access all relevant metadata and data related to the dimensions of the data set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isunlimited</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time
+2029
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>The variables attribute is a dictionary mapping the variable names on objects of the class <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/index.html#netCDF4.Variable">Variable</a>.
+These are used to read or write data and to access the attributes of a variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;temperature_anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;temperature_anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;temperature_anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;temperature_anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">long_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;temperature_anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;temperature_anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">missing_value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float32
+temperature_anomaly
+(&#39;time&#39;, &#39;latitude&#39;, &#39;longitude&#39;)
+temperature_anomaly
+K
+-1e+30
+</pre></div>
+</div>
+</div>
+</div>
+<p>The global attributes are available as attributes of the data set object, e.g.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">reference</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jones, P. D., D. H. Lister, T. J. Osborn, C. Harpham, M. Salmon, and C. P. Morice (2012), Hemispheric and large-scale land-surface air temperature variations: An extensive revision and an update to 2010, J. Geophys. Res., 117, D05127, doi:10.1029/2011JD017139
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reading-data">
+<h3>Reading data<a class="headerlink" href="#reading-data" title="Permalink to this headline">¶</a></h3>
+<p>To read data from a variable into the memory, we simply have to index or slice the variable object. To access the last time step of the variable <code class="docutils literal notranslate"><span class="pre">temperature_anomaly</span></code> we have to do the following</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The order of the dimensions of the variable is identical to the order of the corresponding indices when accessing the variables’ data.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_anom</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;temperature_anomaly&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">][:],</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">][:],</span>
+    <span class="n">t_anom</span>
+<span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t_anom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-- -- -- ... -- -- --]
+ [-- -- -- ... -- -- --]
+ [-- -- -- ... -0.800000011920929 -- --]
+ ...
+ [-- -- -- ... -- -- --]
+ [-- -- -- ... -- -- --]
+ [-- -- -- ... -- -- --]]
+</pre></div>
+</div>
+<img alt="../../_images/input_output_27_1.png" src="../../_images/input_output_27_1.png" />
+</div>
+</div>
+<p>We can see that missing values are masked automatically. Sometimes the data in the binary format is scaled and has an offset to increase the precision of the numerical representation. These transformations are also applied automatically when reading the data into memory.</p>
+</div>
+<div class="section" id="writing-of-netcdf-data-sets">
+<h3>Writing of NetCDF data sets<a class="headerlink" href="#writing-of-netcdf-data-sets" title="Permalink to this headline">¶</a></h3>
+<p>NetCDF Data sets are easily read but writing them is a little bit more cumbersome.
+The following steps are necessary to create a complete NetCDF data set:</p>
+<ol>
+<li><p>Create a data set object and set the global attributes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s1">&#39;test.nc&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">contact</span> <span class="o">=</span> <span class="s1">&#39;Martin Claus &lt;mclaus@geomar.de&gt;&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Zonally averaged surface temperature from NCEP Reanalysis&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">data_source</span> <span class="o">=</span> <span class="s1">&#39;https://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.html&#39;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">creation_date</span> <span class="o">=</span> <span class="s1">&#39;16-06-2019&#39;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the mode parameter of <code class="docutils literal notranslate"><span class="pre">nc.Dataset</span></code> is set to <code class="docutils literal notranslate"><span class="pre">w</span></code> a new file is created. An existing file with the same name will be deleted.
+Other modes are <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">r+</span></code> and <code class="docutils literal notranslate"><span class="pre">r</span></code>. See the <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/index.html#netCDF4.Dataset.__init__">documentation</a></p>
+</div>
+</li>
+<li><p>Create the dimensions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>   <span class="c1"># unlimited dimension</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create the variables:</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">'f8'</span></code> specifies the datatype. See more options in the <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/index.html#netCDF4.Dataset.createVariable">documentation</a>.</p>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lon</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;f8&#39;</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;latitude&#39;</span><span class="p">,))</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;f8&#39;</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,))</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;f8&#39;</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Write variable data and set their attributes</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lon</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">80.</span><span class="p">,</span> <span class="mf">80.</span><span class="p">,</span> <span class="mf">20.</span><span class="p">)</span>
+<span class="n">lon</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;degrees_north&quot;</span>
+<span class="n">lon</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Latitude&quot;</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;days since 2012-01-01 00:00&#39;</span>
+<span class="n">time</span><span class="o">.</span><span class="n">calendar</span> <span class="o">=</span> <span class="s1">&#39;gregorian&#39;</span>
+<span class="n">time</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;Time&#39;</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degC&#39;</span>
+<span class="n">t</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;zonally averaged temperature&#39;</span>
+
+<span class="c1"># write timestamp and data</span>
+<span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.</span>
+<span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+</li>
+<li><p>Close the data set</p>
+<p>Only now the data will be written to disk.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="other-formats">
+<h2>Other formats<a class="headerlink" href="#other-formats" title="Permalink to this headline">¶</a></h2>
+<p>Here is an incomplete list of links to libraries used to deal with other commonly used data formats.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
+<th class="head"><p>Library</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>JSON</p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/json.html">json</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>XML</p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/xml.etree.elementtree.html">xml.etree.ElementTree</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Excel sheets</p></td>
+<td><p>Transform to csv or <a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>matlab <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files</p></td>
+<td><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html#scipy.io.loadmat">scipy.io.loadmat</a></p></td>
+</tr>
+<tr class="row-even"><td><p>shape files</p></td>
+<td><p><a class="reference external" href="https://pypi.org/project/pyshp/">pyshp</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-env-pherwiss_programming-py"
+        },
+        kernelOptions: {
+            kernelName: "conda-env-pherwiss_programming-py",
+            path: "./content/scientific_computing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-env-pherwiss_programming-py'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="numpy.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Numpy</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Martin Claus<br/>
+    
+        &copy; Copyright 2020,.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
