@@ -14,5 +14,6 @@ dependencies:
   - cartopy
   - python-graphviz
   - ipykernel
+  - lxml_html_clean
   - pip:
     - myturtle
