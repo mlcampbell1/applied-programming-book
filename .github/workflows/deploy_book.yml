@@ -23,6 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+        pip install lxml_html_clean
     # Build the book
     - name: Build the book
       run: |
